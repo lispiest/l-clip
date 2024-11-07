@@ -1,0 +1,5 @@
+{:components
+ {:client {:start (l-clip.core/client)}
+  :db {:pre-start (l-clip.core/create (clip/ref :client) "movies")
+       :start (l-clip.core/connect (clip/ref :client) "movies")
+       :post-start l-clip.core/seed}}}
