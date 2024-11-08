@@ -1,6 +1,9 @@
 {:paths ["src" "resources"]
  :deps {org.clojure/clojure {:mvn/version "1.12.0"}
         juxt/clip {:mvn/version "0.29.0"}
-        com.datomic/local {:mvn/version "1.0.285"}}
+        com.datomic/local {:mvn/version "1.0.285"}
+        yada/yada {:mvn/version "1.2.15.1"}
+        manifold/manifold {:mvn/version "0.4.3"}
+        org.slf4j/slf4j-simple {:mvn/version "2.0.16"}}
  :aliases {:dev {:extra-paths ["dev"]
                  :extra-deps {org.clojure/tools.namespace {:mvn/version "1.5.0"}}}}}
