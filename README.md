@@ -5,12 +5,17 @@
 ~ $ echo "{:storage-dir "$PWD"}" > ~/.datomic/local.edn
 ~ $ mkdir -p ~/db
 ```
-### PLAY
+### PLAY (REPL)
 ```bash
-clj -A:dev
+$ clj -A:dev
 ```
 ```clj
 user=> (start)
+```
+### -main
+```bash
+$ clojure -M:run
+Starting up on port 3000
 ```
 ### URL
 ```

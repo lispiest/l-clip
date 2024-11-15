@@ -1,6 +1,10 @@
 (ns l-clip.http
-  (:require [yada.yada :refer [resource]]
+  (:require [yada.yada :refer [resource listener]]
             [datomic.client.api :as d]))
+
+(defn listen
+  [handler port]
+  (listener handler {:port port}))
 
 (defn find-seed-resource
   [conn]

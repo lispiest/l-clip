@@ -1,8 +1,8 @@
 {:components
- {:client {:start (l-clip.core/client)}
-  :db {:pre-start (l-clip.core/create (clip/ref :client) "movies")
-       :start (l-clip.core/connect (clip/ref :client) "movies")
-       :post-start l-clip.core/seed}
+ {:client {:start (l-clip.db/client)}
+  :db {:pre-start (l-clip.db/create (clip/ref :client) "movies")
+       :start (l-clip.db/connect (clip/ref :client) "movies")
+       :post-start l-clip.db/seed}
   :handler {:start (l-clip.http/find-seed-resource (clip/ref :db))}
-  :http {:start (yada.yada/listener (clip/ref :handler) {:port 3000})
+  :http {:start (l-clip.http/listen (clip/ref :handler) 3000)
          :stop ((:close this))}}}

@@ -1,5 +1,5 @@
 (ns l-clip.system
-  (:require [l-clip.core :refer [read-edn]]))
+  (:require [l-clip.util :refer [read-edn]]))
 
 (defn system-config
   [profile]
