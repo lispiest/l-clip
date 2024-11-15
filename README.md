@@ -2,7 +2,7 @@
 ```bash
 ~ $ cd
 ~ $ mkdir -p ~/.datomic
-~ $ echo $PWD > ~/.datomic/local.edn
+~ $ echo "{:storage-dir "$PWD"}" > ~/.datomic/local.edn
 ~ $ mkdir -p ~/db
 ```
 ### PLAY
